@@ -1,0 +1,82 @@
+/* Sarlavha uchun 2- va 3- div larni yashirish */
+.sarlavha > div:nth-child(2), .sarlavha > div:nth-child(3) {
+    display: none;
+}
+/* ------------------------------------- */
+/* navbar uchun */
+
+/* checkbox tanlanmagan holda X menyuni yashirish */ 
+header:has(#hammenu) .hammenux {
+    display: none;
+}
+/* checkbox tanlanganda X menyuni ko'rsatish */ 
+header:has(#hammenu:checked)  .hammenux {
+    display: block;
+}
+/* checkbox tanlanganda hambureger menyuni ko'rsatish */ 
+header:has(#hammenu:checked) .hamburger {
+    display: none;
+}
+/* checkbox tanlanmaganda hambureger menyuni yashirish */ 
+header:has(#hammenu)  .hamburger {
+    display: block;
+}
+/* hamburger menyu va X menyuga dizayn berish */
+.hamburger, .hammenux {
+    padding: 5px 10px;
+    background-color: rgb(114, 78, 241);
+}
+/* checkbox tanlanmaganda navbarni yashirish */ 
+#hammenu + .navbar {
+    display: none;
+}
+/* checkbox tanlanganda navbarni ko'rsatish */ 
+#hammenu:checked + .navbar {
+    display: block;
+    height: 400px;
+    width: 100%; 
+}
+
+/* ------------------------------------- */
+/* sidebar uchun */
+.yon_asos {
+    display: block;
+}
+.yon_asos > aside {
+    display: none;
+}
+
+
+/* ------------------------------------- */
+/* footer uchun */
+footer {
+    display: grid;
+    grid-template-columns: auto;
+}
+footer > div > p:hover {
+    background-color: blueviolet;
+}
+
+/* ------------------------------------- */
+/* boglanish.html faylidagi formalar uchun */
+.birlashtirish {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.form1 {
+    display: grid;
+    grid-template-columns: auto;
+}
+.formalar {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+}
+.form1 {
+    width: 85%;
+}
+
+.form2 {
+    display: grid;
+    grid-template-columns: auto;
+}

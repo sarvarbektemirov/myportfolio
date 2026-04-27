@@ -1,0 +1,365 @@
+/* Modern Design for Portfolio - public/en/ */
+
+:root {
+  --primary-color: #1D9E75;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-muted: #555555;
+  --border-color: #e9ecef;
+  --badge-bg: #E1F5EE;
+  --badge-text: #0F6E56;
+  --footer-border: #f0f0f0;
+  --shadow: 0 4px 20px rgba(0,0,0,.05);
+  --close-btn-filter: none;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-dark: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --badge-bg: rgba(29, 158, 117, 0.15);
+  --badge-text: #4ade80;
+  --footer-border: #334155;
+  --shadow: 0 10px 30px rgba(0,0,0,0.3);
+  --close-btn-filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: 'DM Sans', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-muted, p.text-muted, span.text-muted {
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+
+
+
+.modern-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.modern-header {
+  padding: 1.75rem 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.modern-header-line {
+  width: 4px;
+  height: 28px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.modern-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.modern-body {
+  padding: 0 2rem 2rem;
+  overflow: hidden;
+}
+
+.modern-img {
+  float: left;
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  margin: 0 1.75rem 0.6rem 0;
+}
+
+.modern-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.modern-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin: 0;
+}
+
+.skill-tag {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 6px 16px 6px 6px !important;
+  border-radius: 12px !important;
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  gap: 12px !important;
+  margin: 6px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: default !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+.skill-tag.no-logo {
+  padding-left: 16px !important;
+}
+
+.skill-icon-box {
+  width: 32px !important;
+  height: 32px !important;
+  background: #fff !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+.skill-icon-box img {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain !important;
+}
+
+.skill-dot {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--skill-color, #fff) !important;
+  box-shadow: 0 0 10px var(--skill-color, #fff) !important;
+  flex-shrink: 0 !important;
+}
+
+.skill-name {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: 0.5px !important;
+  text-transform: capitalize !important;
+}
+
+.skill-tag:hover {
+  transform: translateY(-4px) scale(1.02) !important;
+  background: rgba(255,255,255,0.1) !important;
+  border-color: var(--skill-color) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* Color Themes based on Dot Color */
+.skill-tag-1 { --skill-color: #3b82f6; } /* Blue */
+.skill-tag-2 { --skill-color: #10b981; } /* Green */
+.skill-tag-3 { --skill-color: #f59e0b; } /* Amber */
+.skill-tag-4 { --skill-color: #ef4444; } /* Red */
+.skill-tag-5 { --skill-color: #8b5cf6; } /* Purple */
+.skill-tag-6 { --skill-color: #ec4899; } /* Pink */
+.skill-tag-0 { --skill-color: #94a3b8; } /* Slate */
+
+/* Light Mode Overrides */
+[data-theme="light"] .skill-tag {
+  background: #fff !important;
+  border: 1px solid #eee !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+}
+[data-theme="light"] .skill-name {
+  color: #334155 !important;
+}
+[data-theme="light"] .skill-tag:hover {
+  background: #f8fafc !important;
+}
+
+.modern-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 0.9rem 2rem;
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modern-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modern-list-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.modern-list-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .modern-img {
+    float: none;
+    width: 100%;
+    height: 240px;
+    margin: 0 0 1.5rem 0;
+  }
+  .modern-header {
+    padding: 1.5rem 1.5rem 0;
+  }
+  .modern-body {
+    padding: 0 1.5rem 1.5rem;
+  }
+}
+
+/* Publication Styles */
+.pub-tabs {
+    border-bottom: none;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+.pub-tabs .nav-link {
+    border: 1px solid var(--border-color) !important;
+    border-radius: 10px !important;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.2s;
+}
+.pub-tabs .nav-link:hover {
+    background: var(--bg-color);
+    border-color: var(--primary-color) !important;
+}
+.pub-tabs .nav-link.active {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 4px 12px rgba(29, 158, 117, 0.2);
+}
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+.pub-item {
+    position: relative;
+    padding: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: all 0.2s;
+}
+.pub-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+.pub-cite {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+.pub-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+.pub-btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.pub-btn-pdf {
+    background: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+}
+.pub-btn-pdf:hover {
+    background: #e11d48;
+    color: #fff;
+}
+.pub-btn-doi {
+    background: #f0f9ff;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+}
+.pub-btn-doi:hover {
+    background: #0284c7;
+    color: #fff;
+}
+.pub-num {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-color, #1d9e75);
+    margin-bottom: 6px;
+    opacity: 0.7;
+}
+.pub-doi-inline {
+    color: #0284c7;
+    font-size: 13px;
+    text-decoration: none;
+    word-break: break-all;
+}
+.pub-doi-inline:hover {
+    text-decoration: underline;
+}
+/* Modals Theme-Aware */
+.modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.btn-close {
+    filter: var(--close-btn-filter);
+    opacity: 0.8;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}

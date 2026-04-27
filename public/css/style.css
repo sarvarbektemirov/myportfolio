@@ -1,0 +1,511 @@
+/* ------------------------------------- */
+/* barcha kodlar uchun umumiy qoidalar */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------- */
+/* sarlavha qismi uchun stillar */
+.sarlavha {
+    background-color: black;    /* orqa fon rangi */
+    color: white;               /* matn rangi */
+    font-size:small;              /* shrift o'lchami */  
+    display: flex;                /* sohani blokli sohaga aylantiradi hamda ichidagi obyektlarni shu soha ichida yonma-yon shaklda chiqaradi */
+    height: 40px;                 /* soha balandligi */
+    align-items: center;          /* sohadagi obyektlar vertikal bo'yicha markazlashadi */
+    font-family: "Lucida Sans", sans-serif;
+}
+.sarlavha > div {
+    margin: 0 2vw;
+}
+.sarlavha > div:last-child {
+    margin-left: auto;      /* sohani o'ng taraf chetga siljitish*/
+    display: flex;
+    height: 40px;
+}
+.sarlavha a{
+    display: flex;
+    width:20px;                 /* soha eni o'lchami */ 
+    color: white;             
+    text-decoration: none;      /* tag chiziqni olib tashalsh */ 
+    align-items: center;      
+    justify-content: center;    /* sohadagi obyektlar gorizontal bo'yicha markazlashadi*/
+}
+a.active_lan {
+    background-color: rgb(72, 255, 0);
+    color: red;
+}
+.sarlavha > div:last-child > a:hover {
+    background-color: white;
+    color:blue;
+}
+
+/* ------------------------------------- */
+/* navbar qismi uchun stillar */
+
+.navbar{
+    display: flex;
+    background-color: rgb(114, 78, 241);
+    height: 50px;
+    justify-content: center;   /* soha ichidagi barcha elementlar ushbu sohaga nisabatan markazalashadi */ 
+}
+header{
+    position: sticky;
+    top: 0;
+}
+.navbar a {
+    color: #fafafa;
+    text-decoration: none;
+    padding: 0 10px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+.navbar a:hover{
+    background-color: rgb(47, 4, 145);
+}
+.active_menu {
+    background-color: blueviolet;
+}
+
+/* ------------------------------------- */
+/* sidebar va main qismlari uchun stillar */
+
+.yon_asos {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+.yon_asos > aside {
+    background-image: linear-gradient(rgba(113, 78, 241, 0.966), rgba(0, 238, 255, 0.582),rgba(0, 238, 255, 0.199));
+    
+}
+.yon_asos > aside a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ------------------------------------- */
+/* sidebar uchun */
+.s_menu + ul {
+    display: none;
+}
+.s_menu:checked + ul {
+    display: block;
+}
+.s_menu {
+    display: none;
+}
+aside > ul > li {
+    line-height: 40px;
+}
+aside > ul > li > label {
+    padding-left: 10px;
+}
+aside > ul > li:hover  {
+    background-color: rgb(32, 1, 116);
+    color: white;
+    cursor: pointer;
+}
+aside > ul > li:has(.s_menu:checked){
+   background-color: rgb(14, 0, 53);
+   color: white; 
+}
+aside > ul > li > ul > li {
+    line-height: 30px;
+    background-color: rgb(210, 140, 243);
+    font-size: small;
+    font-weight: 700;
+    padding-left: 10px;
+    letter-spacing: -0.5px; 
+} 
+aside > ul > li > ul > li:hover {
+    background-color: rgb(80, 2, 110);
+} 
+aside > ul > li > ul > li > a:hover {
+    color: white;
+} 
+
+aside > ul > li:has(.s_menu:checked) .uchburchak {
+    fill: white;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;  
+    transition: 2s;
+}
+
+
+
+.yon_asos main {
+    padding: 2vh 3vw;
+    background-color: #fafafa;
+    font-family: "Lucida Sans", sans-serif;
+    font-size: smaller;
+}
+.yon_asos main > h2 {
+    text-transform:uppercase; /* matnni katta shriftda chop etish */
+    color: rgb(8, 226, 81);
+    font-family: Audiowide;  /* google shriftidan foydalanish */
+    text-align: center;
+} 
+.yon_asos main p{
+    text-indent: 2vw;
+    text-align: justify;
+}
+.rasm {
+    margin: 0 10px;
+    width: 120px;
+    float: left;
+}
+.edumap {
+    width: 50vw;
+    float: right;
+    margin: 0 0 10px 10px;
+}
+#asosiy_1 p:has(b), #qoshimcha_1 p:has(b) {
+  color: rgb(60, 6, 254);
+  font-size:large;
+}
+.container h3 {
+    text-align: right;
+    text-shadow: 2px 2px 2px rgb(9, 10, 9), 4px 4px 4px yellow;
+    margin: 10px 0;
+    color: rgb(180, 85, 227);
+    font-weight: 900;
+    font-family: Audiowide;
+    letter-spacing: 3px;
+    text-transform:capitalize;
+}
+#scopus_j ol {
+    background-image: url("../rasmlar/scopus_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(8, 4, 253, 0.63);
+    background-blend-mode: multiply; 
+    color: #fafafa;
+}
+.nashrlar li {
+    padding: 1vh 1vw;
+    list-style-position: inside;
+}
+.nashrlar li:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+.nashrlar li:hover {
+    background-color: rgb(3, 102, 16);
+    color: white;
+    padding: 1vh 0;
+    transition: 1s;
+} 
+
+/* ------------------------------------- */
+/* footer uchun */
+footer {
+    background-color: black;
+    color: white;
+    font-size: small;
+    padding: 1vh 2vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+footer > div > p{
+    padding: 0 1vh;
+    height: 30px;
+    margin-bottom: 5px;
+    align-content: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer i {
+    color: rgb(251, 255, 0);
+}
+
+
+/* ------------------------------------- */
+/* boglanish.html faylidagi formalar uchun */
+
+.form1 {
+    background-color: rgba(50, 6, 247, 0.75);
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2vh 0;
+    position: relative;
+}
+.form1 > div{
+    margin: 1vh 1vw;
+}
+.form1 label {
+    display: block;
+    margin: 1vh 0;
+}
+.form1 label > b {
+    color:red;
+}
+.form1 input[type=text], .form1 input[type=email], .form1 input[type=tel], .form1 textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: blue;
+}
+.form1 select {
+    padding: 11px 0;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.form1 input[type=url] {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.birgalikda {
+    display: flex;
+}
+.birlashtirish {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.form1 input[type=file] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(207, 216, 216, 0.788);
+    border-radius: 5px;
+}
+.form1 input[type=submit], .form1 input[type=reset] {
+  width: 60%;
+  background-color: #774caf;
+  color: white;
+  display: block;
+  padding: 12px;
+  margin: 8px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form2 {
+    background-color: rgba(50, 6, 247, 0.9);
+    border-radius: 10px;
+    padding: 1%;
+    margin: 2vh 0;
+    position: relative;
+}
+.form2 > div {
+    margin: 1vh 1vw;
+}
+.form2 label {
+    display: block;
+    margin: 1vh 0;
+    font-weight: 700;
+}
+.form2 label > b {
+    color:red;
+}
+.form2 div:nth-child(4), .form2 div:nth-child(5) {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 10px;
+}
+.form2 div:nth-child(4) > label, .form2 div:nth-child(5) > label {
+    font-weight: normal;
+}
+.form2 div:nth-child(4) > label:nth-child(1), .form2 div:nth-child(5) > label:nth-child(1) {
+    grid-column: 1 / 3;
+    font-weight: bold;
+}
+.form2 input[type=text], .form2 textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: blue;
+}
+.form2 input[type=range]{
+    width: 80%;
+}
+.form2 > div:has(input[type=range]){
+    align-self: center;
+}
+
+
+
+/* Shogirdlar sahifasi uchun */
+
+.info {
+    font-size:medium;
+    color: rgba(0, 47, 255, 0.685);
+    text-align: center;
+}
+.infoplus {
+    font-size: smaller;
+    color: rgba(0, 47, 255, 0.685);
+    text-align: center;
+}
+#bakalavr_1, #magistr_1, #boshqa {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 10px;
+}
+#bakalavr_1 > div > p {
+    margin: 0 2vw;
+}
+
+/* ------------------------------------- */
+/* boglanish.html fayli uchun */
+.formalar {
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+    padding: 20px;
+}
+.formalar > div > button {
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #037930;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    box-shadow: 4px 4px 5px #01c44c, -2px -2px 3px #01f860;
+}
+.formalar > div > button:hover {
+    background-color: #024b1e;
+    color: aqua;
+    cursor: pointer;
+}
+
+/* forma_1 ni yashirish */
+#form_1 + div {
+    display: none;
+}
+/* forma_1 ni ko'rsatish, forma_1 ni ko'rsatganda xira fon qo'shish */
+#form_1:checked + div {
+    display: grid;
+    position: absolute;
+    inset: 0; /* sahifaning to‘liq chegarasi */
+    background: rgba(255,255,255,0.75); 
+    place-items: center;
+    z-index: 999;
+}
+
+/* halqib chiquvchi oynani yopish uchun tugma */
+.form1 > label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #740303;
+    color: white;
+    margin-right: 8px;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+.form1 > label:hover {
+    background-color: #f30404;
+    color: rgb(238, 255, 0);
+    transition: 2s;
+}
+
+/* forma_2 ni yashirish */
+#form_2 + div {
+    display: none;
+}
+/* forma_2 ni ko'rsatish, forma_2 ni ko'rsatganda xira fon qo'shish */
+#form_2:checked + div {
+    display: grid;
+    position: absolute;
+    inset: 0; /* sahifaning to‘liq chegarasi */
+    background: rgba(255,255,255,0.75); 
+    place-items: center;
+    z-index: 999;
+}
+
+/* halqib chiquvchi oynani yopish uchun tugma */
+.form2 > label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #740303;
+    color: white;
+    margin-right: 8px;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+.form2 > label:hover {
+    background-color: #f30404;
+    color: rgb(238, 255, 0);
+    transition: 2s;
+}
+
+/* animatsiyalar uchun */
+
+/* ish.html dagi slayder uchun */
+.marquee-container {
+    width: 100%;
+    height: 300px; 
+    overflow: hidden;
+}
+.marquee {
+     width: 300%;
+    /* Rasmlar joylashgan ichki div */
+    display: flex;
+    gap: 10px;
+    transform: translateX(50vw);
+    animation-name: rasmoqim;
+    animation-duration: 40s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+.marquee img {
+    display: block;
+    max-width: 33%;
+    max-height: 300px;    
+}
+@keyframes rasmoqim {
+0%    { transform: translateX(50vw);}
+100%  { transform: translateX(-200vw); }
+}
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+.rasm_anim {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+}
+.rasm_anim img {
+    position: absolute;
+    top: 10;
+    height: 100%;
+    max-height: 400px;
+    max-width: 90%;
+    object-fit: cover;
+    opacity: 0;
+    animation: rasm_grup_anim 12s infinite;
+}
+/* Har bir rasm uchun boshlanish kechikishini belgilaymiz */
+  .rasm_anim img:nth-child(1) { animation-delay: 0s; }
+  .rasm_anim img:nth-child(2) { animation-delay: 4s; }
+  .rasm_anim img:nth-child(3) { animation-delay: 8s; }
+
+  @keyframes rasm_grup_anim {
+    0%   { opacity: 0; }
+    5%  { opacity: 1; }   
+    35%  { opacity: 1; }   
+    50%  { opacity: 0; }  
+    100% { opacity: 0; }
+}

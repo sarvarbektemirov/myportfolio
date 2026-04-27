@@ -1,0 +1,16 @@
+.home_img {
+    width: 40%;
+    max-width: 250px;
+}
+.matn_soha {
+    text-indent: 20px;
+    text-align: justify;
+}
+.kursor {
+    cursor: pointer;
+}
+.gap_space {
+    gap:20px;
+    justify-content: center;
+    width: calc(100% - 120px);
+}

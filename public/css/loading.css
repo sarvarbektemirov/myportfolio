@@ -1,0 +1,53 @@
+/* Faylni yuklash uchun */
+ /* Yuklanish oynasi */
+.loading-fon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(93, 100, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: yashirish 3.5s ease 2.5s forwards;
+    z-index: 9999;
+}
+/* Yuklanish oynasini yo'qotish */
+@keyframes yashirish {
+    to {display: none; opacity: 0; }
+}
+.loading-text { 
+    display: flex;
+    gap: 20%;
+    font-size: 80px;
+    font-family: Algerian;
+}
+.loading-text span {
+    opacity: 0.3;
+    animation: yuklash 1.4s infinite;
+}
+.loading-text span:nth-child(2) { 
+    animation-delay: 0.2s; 
+}
+.loading-text span:nth-child(3) { 
+    animation-delay: 0.4s; 
+}
+
+@keyframes yuklash {
+    0%  { opacity: 0.2; transform: scale(1); color: rgb(84, 84, 238); }  
+    20% { opacity: 0.7; transform: scale(1.5); color:rgb(68, 6, 240); transform: translateY(50px);}
+    40% { opacity: 1; transform: scale(2); color:rgb(223, 41, 9); }
+    60% { opacity: 0.7; transform: scale(1.5); color:rgb(245, 209, 5); }
+    80% { opacity: 0.4; transform: scale(1.2); color: chartreuse; transform: translateY(-50px);}
+    100% { opacity: 0.2; transform: scale(1); color: rgb(43, 39, 82);} 
+}
+.sarlavha, header, .yon_asos, footer {
+    opacity: 0;
+    animation: ochish 1s ease 3s forwards;
+}
+/* Kontentni ko'rsatish */
+@keyframes ochish {
+    0% { opacity: 0; }
+    100% {opacity: 1;}
+}

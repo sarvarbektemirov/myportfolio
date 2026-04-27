@@ -1,0 +1,88 @@
+/*  Sarlavha uchun 2- div ni yashirish 
+.sarlavha > div:nth-child(2) {
+    display: none;
+} */
+/* ------------------------------------- */
+/* navbar uchun */
+
+/* hamburger menyu va X menyuni yashirish */
+.hamburger, .hammenux {
+    display: none;
+}
+/* navbardagi menyu matnlari shrifti o'lchamini kichraytirish */
+.navbar {
+    font-size: small;
+}
+
+/* ------------------------------------- */
+/* footer uchun */
+footer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+/* ------------------------------------- */
+/* boglanish.html faylidagi formalar uchun */
+
+.form1 {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.form2 {
+    display: grid;
+     grid-template-columns: auto auto;
+}
+
+.formalar {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+}
+/* sarlavha animatsiyasi uchun */ 
+
+.sarlavha div:nth-child(3) {
+    position: fixed;
+    right: 0;
+}
+
+.sarlavha div:nth-child(1) {
+    transform: translateX(25vw);
+    animation-name: div_1;
+    animation-duration: 27s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    white-space: nowrap;
+}
+@keyframes div_1 {
+0%   { opacity: 0;  transform: translateX(25vw);   }
+10%  { opacity: 1; }
+100% { transform: translateX(-100vw); }
+}
+.sarlavha div:nth-child(2) {
+    transform: translateX(10vw);
+    animation-name: div_2;
+    animation-duration: 27s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 2.5s;
+    opacity: 0; 
+}
+@keyframes div_2 {
+0%    { display: none; transform: translateX(10vw); opacity: 0;  }
+20%   { display: flex;  opacity: 1; }
+100%  { transform: translateX(-105vw); }
+}
+.sarlavha div:nth-child(3) {
+    opacity: 0; 
+    transform: translateX(15vw);
+    animation-name: div_3;
+    animation-duration: 27s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 10s;
+}
+@keyframes div_3 {
+0%    { display: none; transform: translateX(10vw); opacity: 0; }
+20%   { display: flex;  opacity: 1;}
+100%  { transform: translateX(-110vw);  }
+}
+

@@ -1,0 +1,22 @@
+/* ------------------------------------- */
+/* navbar uchun */
+.hamburger, .hammenux {
+    display: none;
+}
+
+/* boglanish.html faylidagi formalar uchun */
+
+.form1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.form1 > div:has(input[type=submit]) {
+    place-content: end;
+}
+.form1 > div:has(input[type=reset]) {
+    place-content: end;
+}
+.form2 {
+    display: grid;
+     grid-template-columns: auto auto auto;
+}
